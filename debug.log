@@ -1,0 +1,6 @@
+INFO:sanic.root:Goin' Fast @ http://0.0.0.0:8000
+DEBUG:sanic.root:Sanic auto-reload: enabled
+DEBUG:sanic.root:Sanic debug mode: enabled
+INFO:sanic.root:Starting worker [58013]
+INFO:sanic.root:Stopping worker [58013]
+INFO:sanic.root:Server Stopped

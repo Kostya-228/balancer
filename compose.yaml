@@ -1,0 +1,51 @@
+version: '3'
+services:
+  balancer:
+    build:
+      context: .
+      dockerfile: ./deploy/balancer/Dockerfile
+    ports:
+      - "8010:8010"
+    environment:
+      CDN_HOSTS: 0.0.0.0
+      CDN_COUNT: 5
+  media_0:
+    build:
+      context: .
+      dockerfile: ./deploy/media/Dockerfile
+    environment:
+      HOST: 8000
+    ports:
+      - "8000:8000"
+  media_1:
+    build:
+      context: .
+      dockerfile: ./deploy/media/Dockerfile
+    environment:
+      HOST: 8001
+    ports:
+      - "8001:8001"
+  media_2:
+    build:
+      context: .
+      dockerfile: ./deploy/media/Dockerfile
+    environment:
+      HOST: 8002
+    ports:
+      - "8002:8002"
+  media_3:
+    build:
+      context: .
+      dockerfile: ./deploy/media/Dockerfile
+    environment:
+      HOST: 8003
+    ports:
+      - "8003:8003"
+  media_4:
+    build:
+      context: .
+      dockerfile: ./deploy/media/Dockerfile
+    environment:
+      HOST: 8004
+    ports:
+      - "8004:8004"
